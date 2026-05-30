@@ -1,0 +1,9 @@
+baseURL = "https://dearbrant.github.io/"
+languageCode = "zh-CN"
+title = "dearbrant,"
+theme = "PaperMod"
+paginate = 20
+
+[params]
+  mainSections = ["posts"]
+  disableSpecial1stPost = true

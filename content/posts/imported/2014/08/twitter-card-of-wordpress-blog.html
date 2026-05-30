@@ -1,0 +1,49 @@
+{
+  "title": "为你的 WordPress Blog 提供 Twitter Card",
+  "date": "2014-08-29T08:02:14Z",
+  "lastmod": "2025-01-25T05:57:51Z",
+  "draft": false,
+  "slug": "twitter-card-of-wordpress-blog",
+  "type": "posts",
+  "author": "Brant",
+  "tags": [],
+  "typlog": {
+    "id": 80236,
+    "tags": [],
+    "authors": [
+      {
+        "role": "primary",
+        "id": 3702,
+        "name": "Brant",
+        "username": "omaiga",
+        "avatar": "https://i.typlog.com/brant/8250278057_2041855.png"
+      }
+    ],
+    "slug": "twitter-card-of-wordpress-blog",
+    "lang": "en",
+    "title": "为你的 WordPress Blog 提供 Twitter Card",
+    "subtitle": null,
+    "format": "html",
+    "type": "post",
+    "status": "published",
+    "visibility": "public",
+    "comment": "open",
+    "metadata": {},
+    "created_at": "2025-01-25T05:57:50.972767Z",
+    "updated_at": "2025-01-25T05:57:51.259039Z",
+    "published_at": "2014-08-29T08:02:14Z",
+    "template": "default",
+    "review": null,
+    "path_info": "/2014/08/twitter-card-of-wordpress-blog",
+    "url": "https://dearbrant.com/2014/08/twitter-card-of-wordpress-blog"
+  },
+  "url": "/2014/08/twitter-card-of-wordpress-blog/"
+}
+
+<p><a href="https://dev.twitter.com/docs/cards" target="_blank">Twitter Card</a> 是 Twitter 官方推出的信息形式，可以让一个 Link 在信息流里呈现简单的媒体化样式，有四种模版，具体可以看官方文档。这里介绍如何为基于 WordPress 搭建的个人 Blog 提供 Twitter Card。</p>
+<p>WordPress 社区有丰富的插件资源，因此只需要两个插件就能解决问题。</p>
+<p><a href="http://wordpress.org/plugins/twitter-cards-meta/" target="_blank">Twitter Cards Meta</a> 插件，它会按 Twitter Card 规范定制相应的代码，并自动嵌入到你的 Blog 里。安装激活后，在它的设置页面按需配置即可。另外，还需要在 Blog 控制面板的 Users &gt; Your Profile &gt; Edit 页面底部，填上你的 Twitter Username。</p>
+<p>由于 Twitter Card 的规范里要求一个 Link 需要有对应的 Description 值，也就是内容摘要，但有很多人 Blogging 时不会特意去写摘要，这就需要一个能自动生成摘要的东西。</p>
+<p><a href="http://wordpress.org/plugins/cn-excerpt/" target="_blank">WP CN Excerpt</a> 插件，适合为中文内容提供自动摘要，是不错的选择。安装完后可以去配置页面进行自定义，记得设置摘要长度，因为Twitter Card 要求不超过 200 字符。</p>
+<p>最后，就是来 <a href="https://dev.twitter.com/docs/cards/validation/validator" target="_blank">Card Validator</a> 验证和提交你的 Blog 给 Twitter 审核。验证很容易，选好 Card 类型 (如默认的 Summary)，在 Blog 里选一篇有图文搭配的文章 Link，扔到页面里验证就行。格式通过验证的话，就可以直接在页面上提交审核申请，很快就会收到验证通过邮件。大概10分钟左右，你在 Twitter 上发一个自己 Blog 文章的 Link，就会看到 Twitter Card 包装后的结果了。</p>
+<p><img class="aligncenter wp-image-720 size-full" src="http://www.dearbrant.com/wp-content/uploads/2014/08/Twitter-Card.jpg" alt="Twitter Card" width="520" height="458" /></p>

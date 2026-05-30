@@ -1,0 +1,55 @@
+{
+  "title": "Instapaper 再设计",
+  "date": "2011-12-27T08:34:52Z",
+  "lastmod": "2025-01-25T05:57:50Z",
+  "draft": false,
+  "slug": "instapaper_redesign",
+  "type": "posts",
+  "author": "Brant",
+  "tags": [],
+  "typlog": {
+    "id": 80221,
+    "tags": [],
+    "authors": [
+      {
+        "role": "primary",
+        "id": 3702,
+        "name": "Brant",
+        "username": "omaiga",
+        "avatar": "https://i.typlog.com/brant/8250278057_2041855.png"
+      }
+    ],
+    "slug": "instapaper_redesign",
+    "lang": "en",
+    "title": "Instapaper 再设计",
+    "subtitle": null,
+    "format": "html",
+    "type": "post",
+    "status": "published",
+    "visibility": "public",
+    "comment": "open",
+    "metadata": {},
+    "created_at": "2025-01-25T05:57:50.482033Z",
+    "updated_at": "2025-01-25T05:57:50.609130Z",
+    "published_at": "2011-12-27T08:34:52Z",
+    "template": "default",
+    "review": null,
+    "path_info": "/2011/12/instapaper_redesign",
+    "url": "https://dearbrant.com/2011/12/instapaper_redesign"
+  },
+  "url": "/2011/12/instapaper_redesign/"
+}
+
+<p>为了体验 <a title="读书马上" href="http://www.dushumashang.com/" target="_blank">读书马上</a> 这个阅读项目，买了著名的阅读应用<a title="Instapaper" href="http://www.instapaper.com/" target="_blank">Instapaper</a>，用过后大失所望，和它的名气与价格完全不配 (想想Flipboard/Zite做得这么好还是免费的)。一个好点子被糟糕的设计来实现，实在可惜，于是重新思考并设计了一个版本。</p>
+<p><strong>功能再定义</strong></p>
+<p>一个ReadLater类应用，核心是什么？鼓励你在当下消费。</p>
+<p>Instapaper 刚好相反，Archive 和 Like 两个功能，把“归档”这件事做得很重 (同类应用<a title="ReadItLater" href="http://readitlaterlist.com/iphone/" target="_blank">ReadItLater</a>则做得拖泥带水)。信息过载的时候，信息的价值体现在被经久不息地传播而带来的影响，以及被消费者再加工的衍生物——比如阅读时灵光一现的想法。简单的全文存档，毫无价值。</p>
+<p>我用 Bookmark 这个功能来重新定义 Archive 和 Like 这两个需求。Bookmark可以是简单的收藏全文，也可以摘录片段并加批注。用户也会因此更重视这个App，因为里面有自己生产的数据。而Archive成了纯粹的归档，不进一步分类，仅供检索用。</p>
+<p><strong>导航和交互再设计</strong></p>
+<p>Instapaper 的交互非常落后：必须是 “列表&gt;文章&gt;列表” 的浏览路径，且不支持手势切换。以方便地消费内容为目标，新交互上打破原有的浏览路径，将 “ReadLater”列表界面作为应用的默认界面 (起点)，支持 “列表&gt;文章” 和 “文章&gt;文章” 的浏览路径。</p>
+<p>将三个主要界面分层，利用左右滑动手势来实现快速导航：“列表界面 (ReadLater / Editor 等)” 是中间层，“正文阅读界面” 是最上层，“导航界面” 在最底层。</p>
+<p>“正文阅读界面”的手势，阅读到末位，继续向上滑动，加载下一篇文章，反之亦然。向右滑动，退出阅读界面，直接到达下面一层的ReadLater列表界面。单击阅读界面，唤出工具栏。工具栏仅提供 返回/书签/分享/调整字体  四个选项。</p>
+<p>“列表视图” 支持对单项内容的滑动手势操作，但简化到仅一项操作。例如 “ReadLater” 界面，只支持向右滑动删除某一项。“Archive”界面，只支持向右滑动将某一项列为“未读”。 支持上下拉手势加载新内容。</p>
+<p><strong>思路来源</strong></p>
+<p>Bookmark 的思路来自使用<a title="Kindle" href="http://www.amazon.com/Kindle-eReader-eBook-Reader-e-Reader-Special-Offers/dp/B0051QVESA" target="_blank">Kindle</a>的经验。主界面分层以及伴随式导航菜单来自<a title="Facebook" href="http://itunes.apple.com/us/app/facebook/id284882215?mt=8" target="_blank">Facebook</a> &amp; <a title="Path2.0" href="https://path.com/" target="_blank">Path2.0</a>。阅读和列表界面之间的切换来自<a title="Reeder" href="http://reederapp.com/" target="_blank">Reeder</a>。</p>
+<p><a href="http://www.dearbrant.com/wp-content/uploads/2011/12/Instapaper_redesign_demo.jpg"><img title="点击查看大图" src="http://www.dearbrant.com/wp-content/uploads/2011/12/Instapaper_redesign_demo_s.jpg" alt="点击查看大图" width="570" height="270" /></a></p>
