@@ -1,0 +1,16 @@
+.footer-theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    vertical-align: -0.125em;
+}
+
+.footer-theme-toggle svg {
+    width: 1em;
+    height: 1em;
+}
