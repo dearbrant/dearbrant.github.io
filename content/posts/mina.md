@@ -1,6 +1,6 @@
 +++
 date = '2026-06-15T18:03:24+08:00'
-draft = true
+draft = false
 title = '《皆川明的生活与哲学》摘录'
 slug = 'mina'
 url = '/2026/06/mina/'
