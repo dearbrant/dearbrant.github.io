@@ -1,5 +1,5 @@
 baseURL = "https://dearbrant.com/"
-languageCode = "zh-CN"
+locale = "zh-CN"
 title = "dearbrant,"
 theme = "PaperMod"
 paginate = 20
