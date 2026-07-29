@@ -1,9 +1,29 @@
 baseURL = "https://dearbrant.com/"
 locale = "zh-CN"
 title = "dearbrant,"
-theme = "PaperMod"
-paginate = 20
+theme = "shibui"
 
 [params]
-  mainSections = ["posts"]
-  disableSpecial1stPost = true
+  description = "dearbrant 的个人博客"
+  comments = false
+  showtoc = true
+  showreadingtime = false
+  showlastmod = false
+
+  [params.author]
+    name = "Brant"
+
+[menu]
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = true
