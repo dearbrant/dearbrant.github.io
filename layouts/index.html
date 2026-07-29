@@ -8,8 +8,13 @@
         <h2 class="manual-number">
           <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         </h2>
+        {{ $summary := .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace }}
         <p class="home-post-summary">
-          {{ .Summary | plainify | htmlUnescape }}
+          {{- if gt (strings.RuneCount $summary) 120 -}}
+            {{ strings.Substr $summary 0 120 }}…
+          {{- else -}}
+            {{ $summary }}
+          {{- end -}}
         </p>
       </article>
     {{ end }}
