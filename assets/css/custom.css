@@ -13,9 +13,10 @@
 }
 
 .home-post {
+  --spacing-lg: calc(var(--spacing-base) * 0.75);
+
   padding: 0 0 var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .home-post:first-child h2 {
