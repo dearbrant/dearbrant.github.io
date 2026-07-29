@@ -29,15 +29,22 @@
     {{ end }}
   </div>
 
-  {{ if not .IsHome }}
-    <div class="terminal-nav">
-      <div class="back-nav">
-        {{ with .Parent }}
-          <a href="{{ .RelPermalink }}" class="back-link">../</a>
-        {{ else }}
-          <a href="{{ "/" | relURL }}" class="back-link">../</a>
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $previousPost := $posts.Prev . }}
+  {{ $nextPost := $posts.Next . }}
+  <div class="terminal-nav">
+    <nav class="post-navigation" aria-label="文章导航">
+      <span class="post-navigation-previous">
+        {{ with $previousPost }}
+          <a href="{{ .RelPermalink }}" rel="prev" aria-label="上一篇：{{ .LinkTitle }}">&lt;</a>
         {{ end }}
-      </div>
-    </div>
-  {{ end }}
+      </span>
+      <a class="post-navigation-all" href="{{ "/posts/" | relURL }}">all posts</a>
+      <span class="post-navigation-next">
+        {{ with $nextPost }}
+          <a href="{{ .RelPermalink }}" rel="next" aria-label="下一篇：{{ .LinkTitle }}">&gt;</a>
+        {{ end }}
+      </span>
+    </nav>
+  </div>
 {{ end }}
