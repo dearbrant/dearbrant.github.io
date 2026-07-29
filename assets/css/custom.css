@@ -18,6 +18,7 @@ a {
 }
 
 .home-path-nav li a {
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -34,6 +35,10 @@ a {
 
 .home-post h2 {
   margin-bottom: var(--spacing-sm);
+}
+
+.home-post h2 a {
+  margin-left: 0;
 }
 
 .home-post-summary {
