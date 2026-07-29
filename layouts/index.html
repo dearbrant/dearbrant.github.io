@@ -24,15 +24,15 @@
     <nav class="home-pagination" aria-label="首页分页">
       <span>
         {{ with $paginator.Prev }}
-          <a href="{{ .URL }}">上一页</a>
+          <a href="{{ .URL }}" aria-label="上一页">&lt;</a>
         {{ end }}
       </span>
       <span class="home-pagination-status">
-        第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 页
+        {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
       </span>
       <span>
         {{ with $paginator.Next }}
-          <a href="{{ .URL }}">下一页</a>
+          <a href="{{ .URL }}" aria-label="下一页">&gt;</a>
         {{ end }}
       </span>
     </nav>
