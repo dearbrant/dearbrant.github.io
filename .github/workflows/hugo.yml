@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.161.1
-      HUGO_THEME_PROFILE: dearbrant-papermod-dario
+      HUGO_THEME_PROFILE: dearbrant-shibui
     steps:
       - name: Checkout
         uses: actions/checkout@v4
