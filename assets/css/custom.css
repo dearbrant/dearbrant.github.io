@@ -2,6 +2,11 @@
   color-scheme: light dark;
 }
 
+a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-l: 12%;
