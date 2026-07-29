@@ -17,6 +17,10 @@ a {
   color: inherit;
 }
 
+.home-path-nav li a {
+  padding-left: 0;
+}
+
 .home-post {
   --spacing-lg: calc(var(--spacing-base) * 0.75);
 
