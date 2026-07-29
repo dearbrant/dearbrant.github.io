@@ -28,7 +28,7 @@
         {{ end }}
       </span>
       <span class="home-pagination-status">
-        {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}
+        {{ printf "%02d" $paginator.PageNumber }} / {{ printf "%02d" $paginator.TotalPages }}
       </span>
       <span>
         {{ with $paginator.Next }}

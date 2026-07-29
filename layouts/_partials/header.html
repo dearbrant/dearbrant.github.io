@@ -1,9 +1,7 @@
 {{ if .IsPage }}
   <nav class="path-nav" aria-label="Breadcrumb">
     <ol>
-      <li>
-        <a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>&nbsp;/&nbsp;
-      </li>
+      <li><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>/</li>
       <li class="current">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       </li>
