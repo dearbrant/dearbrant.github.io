@@ -1,0 +1,35 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $paginator := .Paginate $posts }}
+
+  <div class="home-posts">
+    {{ range $paginator.Pages }}
+      <article class="home-post">
+        <h2 class="manual-number">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+        <p class="home-post-summary">
+          {{ .Summary | plainify | htmlUnescape }}
+        </p>
+      </article>
+    {{ end }}
+  </div>
+
+  {{ if gt $paginator.TotalPages 1 }}
+    <nav class="home-pagination" aria-label="首页分页">
+      <span>
+        {{ with $paginator.Prev }}
+          <a href="{{ .URL }}">上一页</a>
+        {{ end }}
+      </span>
+      <span class="home-pagination-status">
+        第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 页
+      </span>
+      <span>
+        {{ with $paginator.Next }}
+          <a href="{{ .URL }}">下一页</a>
+        {{ end }}
+      </span>
+    </nav>
+  {{ end }}
+{{ end }}
