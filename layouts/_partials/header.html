@@ -1,4 +1,12 @@
-{{ if .IsPage }}
+{{ if .IsHome }}
+  <nav class="path-nav" aria-label="Breadcrumb">
+    <ol>
+      <li class="current">
+        <a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+      </li>
+    </ol>
+  </nav>
+{{ else if .IsPage }}
   <nav class="path-nav" aria-label="Breadcrumb">
     <ol>
       <li><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>/</li>
