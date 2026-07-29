@@ -1,0 +1,9 @@
+theme = ["dearbrant-papermod-dario", "PaperMod"]
+
+[pagination]
+  disableAliases = true
+  pagerSize = 20
+
+[params]
+  mainSections = ["posts"]
+  disableSpecial1stPost = true

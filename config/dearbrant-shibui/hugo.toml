@@ -1,7 +1,4 @@
-baseURL = "https://dearbrant.com/"
-locale = "zh-CN"
-title = "dearbrant,"
-theme = "shibui"
+theme = ["dearbrant-shibui", "shibui"]
 
 [pagination]
   pagerSize = 10
